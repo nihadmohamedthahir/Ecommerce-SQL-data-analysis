@@ -1,19 +1,10 @@
-/* ======================================================
-
-    E - COMMERCE SQL ANALYSIS PROJECT 
+  E - COMMERCE SQL ANALYSIS PROJECT 
   
-  =======================================================
-*/
-
-
-/* 
 =============================================
 
   STEP 1 - DATA EXPLORATION [EDA]
 
 =============================================
-*/
-
 --TABLES
 
 select * from customers;
@@ -182,16 +173,11 @@ select * from Payments;
 select count(distinct payment_type)
 from Payments
 
-
-
-/*
 =============================================
 
   STEP 2 - BASIC BUSINESS QUESTIONS
 
 =============================================
-*/
-
 -- Q1 . Total number of Customers.
 
 SELECT COUNT(DISTINCT customer_id) AS Total_customers
@@ -341,13 +327,11 @@ SELECT YEAR(order_purchase_timestamp) AS Years,COUNT(order_id) AS Orders_per_yea
 FROM Orders
 GROUP BY YEAR(order_purchase_timestamp);
 
-/* 
 =============================================
-
- STEP - 3  INTERMEDIATE BUSINESS QUESTIONS 
+STEP - 3  INTERMEDIATE BUSINESS QUESTIONS 
 
 =============================================
-*/
+
 
 --Q21 . Total spending of each customer
 
@@ -554,13 +538,11 @@ GROUP BY YEAR(order_purchase_timestamp),
          DATENAME(MONTH,order_purchase_timestamp)
 ORDER BY YEAR,Monthno,month;
 
-/*
 =============================================
 
  STEP - 4 ADVANCED BUSINESS QUESTIONS 
 
 =============================================
-*/
 
 --Q41 . Monthly revenue trend 
 
@@ -575,8 +557,6 @@ GROUP BY year(order_purchase_timestamp),MONTH(order_purchase_timestamp),datename
 ORDER BY year,monthno ASC;
 
 --Business Insight : The analysis shows the mothly revenue trend from october 2016 to september 2018.
-
-
 
 --Q42 . Year wise revenue
 
