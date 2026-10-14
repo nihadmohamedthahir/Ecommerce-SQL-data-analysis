@@ -1,18 +1,9 @@
-/* ======================================================
-
-    E - COMMERCE SQL ANALYSIS PROJECT 
+ E - COMMERCE SQL ANALYSIS PROJECT 
   
-  =======================================================
-*/
-
-
-/* 
-=============================================
-
-  STEP 1 - DATA EXPLORATION [EDA]
+ STEP 1 - DATA EXPLORATION [EDA]
 
 =============================================
-*/
+
 
 --TABLES
 
@@ -30,7 +21,7 @@ select count(*) as no_of_rows from OrderItems;
 select count(*)  as no_of_rows from Payments;
 select count(*)  as no_of_rows from Products;
 
---FEW RECORDS
+--RECORDS
 
 select top 50 * from customers;
 
@@ -84,7 +75,6 @@ select
 	  sum(case when payment_installments is null then 1 else 0 end) payment_installments,
 	  sum(case when payment_value is null then 1 else 0 end) as payment_value 
 from Payments;
-
 
 --DUPLICATE RECORDS
 
@@ -182,15 +172,11 @@ select * from Payments;
 select count(distinct payment_type)
 from Payments
 
-
-
-/*
 =============================================
 
   STEP 2 - BASIC BUSINESS QUESTIONS
 
 =============================================
-*/
 
 -- Q1 . Total number of Customers.
 
@@ -341,13 +327,11 @@ SELECT YEAR(order_purchase_timestamp) AS Years,COUNT(order_id) AS Orders_per_yea
 FROM Orders
 GROUP BY YEAR(order_purchase_timestamp);
 
-/* 
 =============================================
 
  STEP - 3  INTERMEDIATE BUSINESS QUESTIONS 
 
 =============================================
-*/
 
 --Q21 . Total spending of each customer
 
